@@ -1,9 +1,9 @@
 import React from 'react';
 
-import "./Case.css";
+import './Case.css';
 // importing Wheel and Display components
-import Wheel from './Wheel.js';
-import Display from './Display.js';
+import Wheel from '../Wheel/Wheel';
+import Display from '../Display/Display';
 
 // This component is the outer case of iPod it does nothing special just renders display and wheel component
 class Case extends React.Component {
