@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 
 // import app css file
-import './App.module.css';
+import './App.css';
 
 // Import iPod body component
-import Case from './Case.js';
-import KnowMore from "./KnowMore.js"
+import Case from '../Case/Case';
+import KnowMore from "../KnowMore/KnowMore";
 
 // Import songs from assets/audio
 import song1 from "../../assets/audio/Besomorph  Silent Child  IDGAF.mp3";

@@ -8,10 +8,10 @@
    height: 150px;
    background-color: white;
    font-size: 100px;
- }
+}
  
- /* Bottom div  lock screen */
- .bottom-div-lock{
+/* Bottom div  lock screen */
+.bottom-div-lock{
    width: 270px;
    height: 40px;
    background-color: #E3F2FD;
@@ -19,4 +19,4 @@
    justify-content: center;
    align-items: center;
    font-size: 15px;
- }
+}
