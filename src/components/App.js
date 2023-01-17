@@ -4,13 +4,13 @@ import React from 'react';
 import '../css/App.css';
 // Import iPod body file
 import Case from './Case.js';
-// import KnowMore from "./KnowMore.js"
+
 // Import songs
-import song1 from "../static/songs/Besomorph  Silent Child  IDGAF.mp3"
-import song2 from "../static/songs/Billie Eilish  Six Feet Under.mp3"
-import song3 from "../static/songs/Confetti  Ghost.mp3"
-import song4 from "../static/songs/DHARIA  Sugar  Brownies.mp3"
-import song5 from "../static/songs/Jony Love Your Voice.mp3"
+import song1 from "../static/songs/Besomorph  Silent Child  IDGAF.mp3";
+import song2 from "../static/songs/Billie Eilish  Six Feet Under.mp3";
+import song3 from "../static/songs/Confetti  Ghost.mp3";
+import song4 from "../static/songs/DHARIA  Sugar  Brownies.mp3";
+import song5 from "../static/songs/Jony Love Your Voice.mp3";
 
 // Import song cover images
 import song1Img from "../static/Besomorph  Silent Child  IDGAF.png";
