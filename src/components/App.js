@@ -46,7 +46,7 @@ class App extends React.Component {
       songIndex: 0, //current song
       lengthMenuKey: { "-1": 3, 1: 2, 4: 4, 8: 4, 3: 2, 9: 3 ,10:2},  //length of a particular menu
       menuMapping: { "-1": [0, 1, 2, 3], 1: [4, 5, 6], 3: [8, 9, 10] }, //which menu can be rendered by key menu
-      currentMenu: -2, //current menu which is lockscreen initially
+      currentMenu: -2, //current menu which is lock screen initially
       navigationStack: [], //Used for navigation forward and backward
       songUrl: song1, //current song url
       playing: false, //playing or not
