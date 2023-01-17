@@ -16,20 +16,24 @@ class Wheel extends React.Component {
                         <div style={{color:theme}}>MENU</div>
                     </div>
                     <div className="controll" id="forward">
-                        <i style={{color:theme}} className="fas fa-fast-forward"></i>
+                        <i style={{color:theme}} className="fa-solid fa-forward-fast"></i>
                     </div>
                     <div className="controll" id="play-pause">
                         <div>
-                            <i style={{color:theme}} className="fas fa-play"></i>
-                            <i style={{color:theme}} className="fas fa-pause"></i>
+                            <i style={{color:theme}} className="fa-solid fa-play"></i>
+                            <i style={{color:theme}} className="fa-solid fa-pause"></i>
                         </div>
                     </div>
                     <div className="controll" id="reverse">
-                        <i style={{color:theme}} className="fas fa-fast-backward"></i>
+                        <i style={{color:theme}} className="fa-solid fa-backward-fast"></i>
                     </div>
                 </div>
 
-                <div style={{backgroundColor:theme}} className="blank" id="blank" onClick={() => { changeMenuForward(active, currentMenu) }}></div>
+                <div style={{backgroundColor:theme}} 
+                    className="blank" 
+                    id="blank" 
+                    onClick={() => { changeMenuForward(active, currentMenu) }}
+                ></div>
             </div>
         )
     }
@@ -100,11 +104,7 @@ class Wheel extends React.Component {
         activeRegion.bind(forward, longTapGesture, function (e) {
             seekSongForward(e);
         });
-        
-
     }
-
 }
-
 
 export default Wheel;

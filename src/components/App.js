@@ -36,7 +36,13 @@ class App extends React.Component {
       songItemsUrl: [song1, song2, song3,song4,song5,],  //songs list
       songImgItemsUrl: [song1Img, song2Img, song3Img,song4Img,song5Img,],  //song images list
       wallpaperItems: [AudioTapes, BlueCubes, BlueJelly], //wallpapers
-      songItems: ["Besomorph  Silent Child  IDGAF", "Billie Eilish  Six Feet Under", "Confetti  Ghost","DHARIA  Sugar  Brownies","Jony Love Your Voice"], //song names
+      songItems: [
+        "Besomorph  Silent Child  IDGAF", 
+        "Billie Eilish  Six Feet Under", 
+        "Confetti  Ghost",
+        "DHARIA  Sugar  Brownies",
+        "Jony Love Your Voice"
+      ], //song names
       songIndex: 0, //current song
       lengthMenuKey: { "-1": 3, 1: 2, 4: 4, 8: 4, 3: 2, 9: 3 ,10:2},  //length of a particular menu
       menuMapping: { "-1": [0, 1, 2, 3], 1: [4, 5, 6], 3: [8, 9, 10] }, //which menu can be rendered by key menu
@@ -72,9 +78,13 @@ class App extends React.Component {
       }
       const songUrl = this.state.songItemsUrl[songIndex];
       const songImgUrl = this.state.songImgItemsUrl[songIndex];
-      this.setState({ songIndex: songIndex, songImgUrl: songImgUrl, songUrl: songUrl, audio: new Audio(songUrl) }, () => {
-        this.state.audio.play();
-      });
+      this.setState({ 
+        songIndex: songIndex, 
+        songImgUrl: songImgUrl, 
+        songUrl: songUrl, 
+        audio: new Audio(songUrl)
+      }, () => { this.state.audio.play();});
+
     } else if (e.detail.interval > 250 && e.detail.interval < 10000) {
       const interval = e.detail.interval / 100;
       this.setState((prevState)=>{
@@ -103,9 +113,13 @@ class App extends React.Component {
       }
       const songUrl = this.state.songItemsUrl[songIndex];
       const songImgUrl = this.state.songImgItemsUrl[songIndex];
-      this.setState({ songIndex: songIndex, songImgUrl: songImgUrl, songUrl: songUrl, audio: new Audio(songUrl) }, () => {
-        this.state.audio.play();
-      });
+      this.setState({ 
+        songIndex: songIndex, 
+        songImgUrl: songImgUrl, 
+        songUrl: songUrl, 
+        audio: new Audio(songUrl) 
+      }, () => {this.state.audio.play(); });
+      
     } else if (e.detail.interval > 250 && e.detail.interval < 10000) {
       const interval = e.detail.interval / 100;
       this.setState((prevState)=>{
@@ -206,9 +220,16 @@ class App extends React.Component {
     const songUrl = this.state.songItemsUrl[id];
     const songImgUrl = this.state.songImgItemsUrl[id];
     this.state.audio.pause();
-    this.setState({ currentMenu: 7, songUrl: songUrl, navigationStack: navigationStack, active: 0, playing: true, songIndex: id, audio: new Audio(songUrl), songImgUrl: songImgUrl }, () => {
-      this.state.audio.play();
-    });
+    this.setState({ 
+      currentMenu: 7, 
+      songUrl: songUrl, 
+      navigationStack: navigationStack, 
+      active: 0, 
+      playing: true, 
+      songIndex: id, 
+      audio: new Audio(songUrl), 
+      songImgUrl: songImgUrl 
+    }, () => {this.state.audio.play();} );
     return;
   }
 
@@ -232,9 +253,18 @@ class App extends React.Component {
 
     const navigationStack = this.state.navigationStack.slice();
 
-    if (fromMenu !== -2 && fromMenu !== -1 && fromMenu !== 1 && fromMenu !== 4 && fromMenu !== 3 && fromMenu !== 8 && fromMenu !== 9 && fromMenu !== 0 && fromMenu !== 7 &&fromMenu !== 10) {
-      return;
-    }
+    if (
+      fromMenu !== -2 
+      && fromMenu !== -1 
+      && fromMenu !== 1 
+      && fromMenu !== 4 
+      && fromMenu !== 3 
+      && fromMenu !== 8 
+      && fromMenu !== 9 
+      && fromMenu !== 0 
+      && fromMenu !== 7 
+      &&fromMenu !== 10
+    ) { return; }
 
     if (fromMenu === -2) {
       navigationStack.push(this.state.currentMenu);
@@ -290,11 +320,51 @@ class App extends React.Component {
 
   // FUNCTION FOR : RENDERING APP 
   render() {
-    const { audio, active, currentMenu, menuItems, musicItems, songItems, playing, songIndex, theme, songUrl, songImgUrl, wheelColor, wallpaper, wallpaperItems, noty, notifyText } = this.state;
+    const { 
+      audio, 
+      active, 
+      currentMenu, 
+      menuItems, 
+      musicItems, 
+      songItems, 
+      playing, 
+      songIndex, 
+      theme, 
+      songUrl, 
+      songImgUrl, 
+      wheelColor, 
+      wallpaper, 
+      wallpaperItems, 
+      noty, 
+      notifyText 
+    } = this.state;
     return (
       <div className="App">
-        {/* <KnowMore/> */}
-        <Case songIndex={songIndex} active={active} menuItems={menuItems} musicItems={musicItems} currentMenu={currentMenu} changeMenuForward={this.changeMenuForward} changeMenuBackward={this.changeMenuBackward} updateActiveMenu={this.updateActiveMenu} togglePlayPause={this.togglePlayPause} songItems={songItems} playing={playing} theme={theme} audio={audio} songUrl={songUrl} songImgUrl={songImgUrl} seekSongForward={this.seekSongForward} seekSongReverse={this.seekSongReverse} wheelColor={wheelColor} wallpaper={wallpaper} wallpaperItems={wallpaperItems} noty={noty} setNoty={this.setNoty} notifyText={notifyText}/>
+        <Case 
+          songIndex={songIndex} 
+          active={active} 
+          menuItems={menuItems} 
+          musicItems={musicItems} 
+          currentMenu={currentMenu} 
+          changeMenuForward={this.changeMenuForward} 
+          changeMenuBackward={this.changeMenuBackward} 
+          updateActiveMenu={this.updateActiveMenu} 
+          togglePlayPause={this.togglePlayPause} 
+          songItems={songItems} 
+          playing={playing} 
+          theme={theme} 
+          audio={audio} 
+          songUrl={songUrl} 
+          songImgUrl={songImgUrl} 
+          seekSongForward={this.seekSongForward} 
+          seekSongReverse={this.seekSongReverse} 
+          wheelColor={wheelColor} 
+          wallpaper={wallpaper} 
+          wallpaperItems={wallpaperItems} 
+          noty={noty} 
+          setNoty={this.setNoty} 
+          notifyText={notifyText}
+        />
       </div>
     );
   }
