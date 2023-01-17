@@ -20,9 +20,9 @@ import song4Img from "../static/DHARIA  Sugar  Brownies.png";
 import song5Img from "../static/Jony Love Your Voice.png";
 
 // Import wallpapers
-import AudioTapes from "../static/AudioTapes.png"
-import BlueCubes from "../static/BlueCubes.png"
-import BlueJelly from "../static/BlueJelly.png"
+import AudioTapes from "../static/Lockscreen.jpg";
+import BlueCubes from "../static/BlueCubes.png";
+import BlueJelly from "../static/BlueJelly.png";
 
 
 
@@ -119,7 +119,7 @@ class App extends React.Component {
         songUrl: songUrl, 
         audio: new Audio(songUrl) 
       }, () => {this.state.audio.play(); });
-      
+
     } else if (e.detail.interval > 250 && e.detail.interval < 10000) {
       const interval = e.detail.interval / 100;
       this.setState((prevState)=>{
