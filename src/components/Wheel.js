@@ -33,7 +33,7 @@ class Wheel extends React.Component {
                     className="blank" 
                     id="blank" 
                     onClick={() => { changeMenuForward(active, currentMenu) }}
-                ></div>
+                > <span className='ok'>Ok</span></div>
             </div>
         )
     }
